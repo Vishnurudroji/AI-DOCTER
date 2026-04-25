@@ -1,0 +1,21 @@
+{
+    "name": "VitaCare",
+    "short_name": "VitaCare",
+    "description": "AI Health Assistant",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#16a34a",
+    "icons": [
+        {
+            "src": "/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/vitacare.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
