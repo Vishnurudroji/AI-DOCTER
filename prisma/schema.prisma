@@ -1,0 +1,71 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Medicine {
+  id         Int      @id @default(autoincrement())
+  userId     Int
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name       String
+  dosage     String
+  time       String
+  timeOfDay  String   @default("Morning")
+  frequency  String   @default("Once daily")
+  daysLeft   Int      @default(30)
+  runningLow Boolean  @default(false)
+  isActive   Boolean  @default(true)
+  isMarked   Boolean  @default(false)
+  createdAt  DateTime @default(now())
+}
+
+model Report {
+  id            Int      @id @default(autoincrement())
+  userId        Int
+  user          User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  title         String
+  type          String
+  fileUrl       String?
+  doctorName    String?
+  hospitalName  String?
+  reportDate    String?
+  notes         String?
+  metadata      String?
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model User {
+  id          Int        @id @default(autoincrement())
+  phoneNumber String     @unique
+  name        String?
+  language    String?
+  createdAt   DateTime   @default(now())
+  profile     Profile?
+  medicines   Medicine[]
+  reports     Report[]
+}
+
+model Profile {
+  id             Int      @id @default(autoincrement())
+  userId         Int      @unique
+  user           User     @relation(fields: [userId], references: [id])
+  age            Int?
+  gender         String?
+  bloodGroup     String?
+  weight         Float?
+  height         Float?
+  allergies      String?
+  conditions     String?
+  emergencyName  String?
+  emergencyPhone String?
+  address        String?
+  completed      Boolean  @default(false)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
