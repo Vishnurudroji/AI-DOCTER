@@ -5,7 +5,7 @@ const SECRET = new TextEncoder().encode(
   process.env.JWT_SECRET || "vitacare-local-secret"
 );
 
-export async function middleware(request) {
+export async function proxy(request) {
   const token = request.cookies.get("vitacare_session")?.value;
   const path = request.nextUrl.pathname;
 
