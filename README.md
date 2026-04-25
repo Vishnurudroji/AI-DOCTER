@@ -253,7 +253,7 @@ Unlike basic CRUD projects, VitaCare solves a real problem using modern AI workf
 
 ---
 
-# ![Coder](https://giphy.com) Author
+#  Author
 
 **Vishnu Rudroji**
 CSE Student | Full Stack Developer | AI Builder
