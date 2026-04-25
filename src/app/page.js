@@ -702,7 +702,7 @@ export default function VitaCare() {
         </div>
 
         <div className="absolute bottom-0 w-full bg-slate-900/95 backdrop-blur-xl border-t border-slate-800 pb-safe pt-2 px-2 z-30 flex justify-around items-center h-[76px] pb-2">
-          {[ {id:'home', i:Home, l:'Home'}, {id:'medicines', i:Pill, l:'Meds'}, {id:'reports', i:FileText, l:'Reports'}, {id:'chat', i:MessageSquare, l:'Chat'}, {id:'care', i:Heart, l:'Care'}, {id:'profile', i:User, l:'Profile'} ].map(n => {
+          {[ {id:'home', i:Home, l:'Home'}, {id:'medicines', i:Pill, l:'Meds'}, {id:'reports', i:FileText, l:'Reports'}, {id:'chat', i:MessageSquare, l:'Chat'}, {id:'profile', i:User, l:'Profile'} ].map(n => {
             const act = tab === n.id;
             return (
               <button key={n.id} onClick={() => setTab(n.id)} className="flex flex-col items-center w-14 relative">
