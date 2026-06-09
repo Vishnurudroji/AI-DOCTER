@@ -12,11 +12,7 @@ Designed as a real-world portfolio project for software engineering and AI produ
 
 Try it link here:
 
-```txt
-
-(https://vitacare-ai.vercel.app/login)```
-
----
+(https://vitacare-ai.vercel.app/login)
 
 # 📸 Screenshots
 
