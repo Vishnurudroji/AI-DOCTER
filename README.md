@@ -13,8 +13,8 @@ Designed as a real-world portfolio project for software engineering and AI produ
 Try it link here:
 
 ```txt
-https://your-app-url.vercel.app
-```
+
+(https://vitacare-ai.vercel.app/login)```
 
 ---
 
